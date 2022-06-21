@@ -64,8 +64,10 @@ function clearTasks() {
   // taskList.innerHTML = '';
 
   // Faster
-  while (taskList.firstChild) {
-    taskList.removeChild(taskList.firstChild);
+  if (confirm("You want Delete All?")) {
+    while (taskList.firstChild) {
+      taskList.removeChild(taskList.firstChild);
+    }
   }
 }
 
