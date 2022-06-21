@@ -100,7 +100,7 @@ function storeTaskInLocalStorage(task) {
 
 function removeTask(e) {
   if (e.target.parentElement.classList.contains("delete-item")) {
-    if (confirm("Are You Sure?")) {
+    if (confirm("هل انت متاكد?")) {
       e.target.parentElement.parentElement.remove();
 
       removeTaskFromLocalStorage(e.target.parentElement.parentElement);
@@ -127,7 +127,7 @@ function removeTaskFromLocalStorage(taskItem) {
 
 // Clear Tasks
 function clearTasks() {
-  if (confirm("Are You Sure?")) {
+  if (confirm("هل تريد حذف المهام جميعا؟")) {
     while (taskList.firstChild) {
       taskList.removeChild(taskList.firstChild);
     }
